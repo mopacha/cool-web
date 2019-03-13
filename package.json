@@ -1,7 +1,7 @@
 {
-	"name": "koa2-vue-web",
+	"name": "koa-vue-web",
 	"version": "1.0.0",
-	"description": "koa2+vue+axios+element+webpack",
+	"description": "koa+vue+axios+element+webpack",
 	"main": "index.js",
 	"bin": {
 		"cool": "./bin/cool.js"

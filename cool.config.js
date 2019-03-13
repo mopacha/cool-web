@@ -11,6 +11,6 @@ module.exports = {
   devServer: {
     hot: false,
     port: 8686,
-    publicPath: 'http://localhost:8686/koa2-vue-static/'
+    publicPath: 'http://localhost:8686/koa-vue-static/'
   }
 }

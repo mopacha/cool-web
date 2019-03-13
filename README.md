@@ -1,6 +1,6 @@
 # 未完，，待续，，，
 
-## koa2-vue-web
+## koa-vue-web
 
 ### 安装依赖
 

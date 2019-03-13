@@ -4,7 +4,7 @@ module.exports = {
   // 模板变量全局配置
   views: {
     staticDomain: config.staticDomain,
-    staticHostUrl: `${config.staticDomain}/koa2-vue-static`
+    staticHostUrl: `${config.staticDomain}/koa-vue-static`
   }
 }
 
