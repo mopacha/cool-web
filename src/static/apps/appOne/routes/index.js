@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '../page/home'
-import Detail from '../page/detail'
+// import Home from '../page/home'
+// import Detail from '../page/detail'
 Vue.use(Router)
-// const Home = () => import(/* webpackChunkName: 'wedgit' */ '../page/home')
-// const Detail = () => import(/* webpackChunkName: 'wedgit' */ '../page/detail')
+const Home = () => import(/* webpackChunkName: 'home' */ '../page/home')
+const Detail = () => import(/* webpackChunkName: 'detail' */ '../page/detail')
 
 export const routes = [
   { path: '/', component: Home },

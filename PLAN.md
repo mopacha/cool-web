@@ -18,6 +18,11 @@ https://aui.github.io/art-template/rendering-test/
 ### vue-router
 页面间路由
 
+### 路由按需加载
+
+1. 按需加载
+2. 
+
 
 
 #### 引入element-ui.
@@ -25,7 +30,7 @@ https://aui.github.io/art-template/rendering-test/
 
 
 
-
+### cool 命令
 
 
 

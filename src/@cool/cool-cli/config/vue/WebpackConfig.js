@@ -18,7 +18,8 @@ exports._default = function (env) {
   const output = {
     path: path.join(process.cwd(), './dist/'),
     filename: '[name].js',
-    sourceMapFilename: '[name].js.map'
+    chunkFilename: '[name].js'
+    // sourceMapFilename: '[name].js.map'
     // publicPath: ''
   }
 
@@ -47,7 +48,7 @@ exports._default = function (env) {
     new ProgressBarPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[name].css'
     })
   ]
 

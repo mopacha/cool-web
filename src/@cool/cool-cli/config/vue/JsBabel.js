@@ -10,7 +10,7 @@ exports.get = () => {
           useESModules: true
         }
       ],
-    // ['@babel/plugin-syntax-dynamic-import'],
+      ['@babel/plugin-syntax-dynamic-import'],
       [
         'component',
         {
