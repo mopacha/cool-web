@@ -1,0 +1,25 @@
+.DS_Store
+node_modules
+package-lock.json
+
+build/
+dist/
+#static/styles/includes/sprites/
+server/view/release
+
+# Log files
+logs/
+npm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+
+
+

@@ -1,0 +1,9 @@
+{{extend '../layout/default.art'}}
+{{block 'title'}}主页{{/block}}
+{{block 'styles'}}<link rel="stylesheet" href="{{@staticHostUrl}}/appOne.css">{{/block}}
+{{block 'scripts'}}<script type="text/javascript" src="{{@staticHostUrl}}/appOne.js"></script>{{/block}}
+{{block 'body'}}
+<div id="app"></div>
+{{/block}}
+
+
