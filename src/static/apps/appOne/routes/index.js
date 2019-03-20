@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-const Home = () => import(/* webpackChunkName: 'home' */ '../pages/home')
-const Detail = () => import(/* webpackChunkName: 'detail' */ '../pages/detail')
+const Home = () => import(/* webpackChunkName: 'home' */ '../page/home')
+const Detail = () => import(/* webpackChunkName: 'detail' */ '../page/detail')
 
 export const routes = [
   { path: '/', component: Home },

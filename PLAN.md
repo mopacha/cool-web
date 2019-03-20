@@ -15,15 +15,8 @@
 art-template
 https://aui.github.io/art-template/rendering-test/
 
-### vue-router
-页面间路由
 
-### 路由按需加载
-
-1. 按需加载
-2. 
-
-
+### vue-router+webpack 路由按需加载
 
 #### 引入element-ui.
 
@@ -41,11 +34,10 @@ https://aui.github.io/art-template/rendering-test/
 `#! /usr/bin/env node` 没能识别出你的 node 的路径，需要将你的 node 安装路径（如/usr/local/bin/）加入到系统的 PATH 中
 
 
-
-
 ### ctrl+shift+f 
 
 `(".*[\u4E00-\u9FA5]+)|([\u4E00-\u9FA5]+.*")`  查找所有中文
+
 
 ### error
 
@@ -88,8 +80,6 @@ node端：
 >  art模板文件：1.default.art : 加载一些固定的资源
 >      				 2.具体应用.art 
 
-
-
 ### 开发环境：
 1. `cool start` 启动静态资源服务(静态资源打包在内存中)
   
@@ -99,7 +89,6 @@ node端：
 			  读取模板文件，加载打包好的静态资源
     
 
-	
 ### 问题
 > 将打包好的资源根据`vue-router`实现资源懒加载
 
@@ -108,31 +97,53 @@ node端：
 manifest 文件生产和测试都需要
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### 一、引入 element 组件库
+### 一、引入 element ui 组件库
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
