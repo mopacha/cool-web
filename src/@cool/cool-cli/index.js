@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const program = require('commander')
 const chalk = require('chalk')
 const figlet = require('figlet')
@@ -80,8 +78,8 @@ program
   .option('-c --config [config]', 'cool配置文件', './cool.config.js')
   .action(function (cmd) {
     const coolConfig = getCoolConfig(cmd.config, 'production')
-
     WebpackConfig.pkProduction(coolConfig)
+
     webpack(coolConfig.webpackConfig, function (err, stat) {
       if (err) {
         console.log(err)

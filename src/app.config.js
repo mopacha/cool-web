@@ -5,6 +5,10 @@ module.exports = {
   views: {
     staticDomain: config.staticDomain,
     staticHostUrl: `${config.staticDomain}/koa-vue-static`
+  },
+
+  staticAssets: {
+    publicPath: `${config.staticDomain}/koa-vue-static`
   }
 }
 

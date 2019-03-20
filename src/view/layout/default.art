@@ -16,6 +16,7 @@
 				window.staticHostUrl=`{{staticHostUrl}}`
     </script>
 		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-libs.js"></script>
+		<script type="text/javascript" src="{{@staticHostUrl}}/manifest.js"></script>
 	 {{block 'scripts'}}{{/block}}
 </body>
 </html>

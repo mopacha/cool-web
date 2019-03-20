@@ -12,15 +12,18 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const Smp = new SpeedMeasurePlugin()
 const BabelConfig = require('./JsBabel')
 
+const staticPublicPath = require(path.join(process.cwd(), './src/app.config'))
+  .staticAssets.publicPath
+
 exports._default = function (env) {
   env = env || 'development'
 
   const output = {
     path: path.join(process.cwd(), './dist/'),
     filename: '[name].js',
-    chunkFilename: '[name].js'
+    chunkFilename: '[name].js',
     // sourceMapFilename: '[name].js.map'
-    // publicPath: ''
+    publicPath: `${staticPublicPath}/`
   }
 
   const AUTOPREFIXER_BROWSERS = [
@@ -175,6 +178,9 @@ exports._default = function (env) {
           reuseExistingChunk: false
         }
       }
+    },
+    runtimeChunk: {
+      name: 'manifest'
     }
   }
 
@@ -219,6 +225,7 @@ exports.pkDevelopment = function (coolConfig) {
       new HtmlWebpackPlugin({
         template: template,
         filename: `${entry}.html`,
+        inject: true,
         chunks: [entry]
       })
     )

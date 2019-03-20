@@ -2,7 +2,6 @@
 {{block 'title'}}详情页{{/block}}
 {{block 'styles'}}<link rel="stylesheet" href="{{@staticHostUrl}}/appTwo.css">{{/block}}
 {{block 'scripts'}}<script type="text/javascript" src="{{@staticHostUrl}}/appTwo.js"></script>{{/block}}
-
 {{block 'body'}}
 <div id="app"></div>
 {{/block}}
