@@ -8,6 +8,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const Smp = new SpeedMeasurePlugin()
 const BabelConfig = require('./JsBabel')
@@ -49,6 +50,7 @@ exports._default = function (env) {
     new VueLoaderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new ProgressBarPlugin(),
+
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css'
@@ -167,13 +169,14 @@ exports._default = function (env) {
         elementUI: {
           name: 'chunk-elementUI',
           priority: 20, // 权重要大于 libs 和 app 不然会被打包进 libs 或者 app
-          test: /[\\/]node_modules[\\/]element-ui[\\/]/
+          test: /[\\/]node_modules[\\/]element-ui[\\/]/,
+          chunks: 'initial'
         },
         commons: {
           //	test: resolve('src/static/common'), // 可自定义拓展你的规则
           name: `chunk-commons`,
           minChunks: 2, // 最小共用次数,
-          priority: 1,
+          priority: 5,
           chunks: 'initial',
           reuseExistingChunk: false
         }

@@ -98,6 +98,43 @@ manifest 文件生产和测试都需要
 
 
 ### 一、引入 element ui 组件库
+
+`npm i element-ui -D`
+
+按需引入
+
+`npm install babel-plugin-component -D`
+
+
+```
+//jsBabel.js
+"plugins": [
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
+  ]
+
+```
+
+
+
+
+
+
+### webpack4 打包策略优化(参考： https://segmentfault.com/a/1190000015919928)
+
+原则： 体积大小、共用频率、更新频率
+
+
+- 基础类库: chunk-libs 
+  vue+vue-router+vuex+axios+（nprogress、js-cookie、clipboard体积不大的第三方库）
+
+-	UI 组件库
+  
   
 
 

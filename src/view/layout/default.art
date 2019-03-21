@@ -15,8 +15,10 @@
         window.staticDomain=`{{staticDomain}}`
 				window.staticHostUrl=`{{staticHostUrl}}`
     </script>
-		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-libs.js"></script>
 		<script type="text/javascript" src="{{@staticHostUrl}}/manifest.js"></script>
+		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-libs.js"></script>
+		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-elementUI.js"></script>
+		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-elementUI.css"></script>
 	 {{block 'scripts'}}{{/block}}
 </body>
 </html>
