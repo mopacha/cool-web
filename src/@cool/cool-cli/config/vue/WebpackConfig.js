@@ -16,6 +16,12 @@ const BabelConfig = require('./JsBabel')
 const staticPublicPath = require(path.join(process.cwd(), './src/app.config'))
   .staticAssets.publicPath
 
+function srcPath (dir) {
+  return path.join(process.cwd(), './src', dir)
+}
+
+console.log(srcPath(''))
+
 exports._default = function (env) {
   env = env || 'development'
 
@@ -71,21 +77,29 @@ exports._default = function (env) {
         test: /\.vue$/,
         loader: 'vue-loader'
       },
+
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          name: '[name].[hash:6].[ext]',
-          limit: 1024,
-          outputPath: 'images'
+          limit: 10000,
+          name: 'img/[name].[hash:6].[ext]'
         }
       },
       {
-        test: /\.(eot|ttf|wav|mp3|svg|woff|woff2)$/,
-        loader: 'file-loader',
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
         options: {
-          name: '[name].[hash:6].[ext]',
-          outputPath: 'fonts'
+          limit: 10000,
+          name: 'media/[name].[hash:6].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'fonts/[name].[hash:6].[ext]'
         }
       },
       {
@@ -111,15 +125,12 @@ exports._default = function (env) {
   }
 
   const resolve = {
-    extensions: ['.js', '.vue', '.scss'],
-
-    modules: [
-      path.resolve('./src/static/apps/'),
-      path.resolve('./src/static/styles/'),
-      path.resolve('./node_modules/')
-    ],
+    extensions: ['.js', '.vue', '.scss', '.json'],
+    modules: [path.resolve('./src/static/'), path.resolve('./node_modules/')],
     alias: {
-      vue: 'vue/dist/vue.esm.js'
+      vue: 'vue/dist/vue.esm.js',
+      '@static': srcPath('static'),
+      '@': srcPath('')
     }
   }
 
@@ -173,7 +184,7 @@ exports._default = function (env) {
           chunks: 'initial'
         },
         commons: {
-          //	test: resolve('src/static/common'), // 可自定义拓展你的规则
+          // test: path.join(process.cwd(), './src/static/public'), // 可自定义拓展你的规则
           name: `chunk-commons`,
           minChunks: 2, // 最小共用次数,
           priority: 5,

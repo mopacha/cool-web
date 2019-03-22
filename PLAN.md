@@ -121,10 +121,6 @@ manifest 文件生产和测试都需要
 ```
 
 
-
-
-
-
 ### webpack4 打包策略优化(参考： https://segmentfault.com/a/1190000015919928)
 
 原则： 体积大小、共用频率、更新频率
@@ -134,7 +130,9 @@ manifest 文件生产和测试都需要
   vue+vue-router+vuex+axios+（nprogress、js-cookie、clipboard体积不大的第三方库）
 
 -	UI 组件库
-  
+
+### SVG 
+参考：https://github.com/cenkai88/vue-svg-icon  
   
 
 

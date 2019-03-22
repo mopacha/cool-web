@@ -7,6 +7,7 @@
     <meta name="keyword" content="">
     <meta name="description" content="">
     <title>{{block 'title'}}{{/block}}</title>
+		<link rel="stylesheet" href="{{@staticHostUrl}}/chunk-elementUI.css">
     {{block 'styles'}}{{/block}}
 </head>
 <body >
@@ -18,7 +19,7 @@
 		<script type="text/javascript" src="{{@staticHostUrl}}/manifest.js"></script>
 		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-libs.js"></script>
 		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-elementUI.js"></script>
-		<script type="text/javascript" src="{{@staticHostUrl}}/chunk-elementUI.css"></script>
+
 	 {{block 'scripts'}}{{/block}}
 </body>
 </html>
