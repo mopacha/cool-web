@@ -133,6 +133,14 @@ manifest 文件生产和测试都需要
 
 ### SVG 
 参考：https://github.com/cenkai88/vue-svg-icon  
+
+
+### service
+
+前端request--->node层---->service api
+
+
+
   
 
 
