@@ -30,8 +30,6 @@ Asker.request = async options => {
     { 'Content-Type': 'application/json;charset=utf-8' },
     options.headers
   )
-
-  console.log(options)
   return await axios(options)
     .then(function (res) {
       showInfo('info', res, {

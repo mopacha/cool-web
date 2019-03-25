@@ -7,7 +7,7 @@ const baseURL = config.coolAppHostUrl
 // }
 
 const login = reqData => {
-  const url = `/user/login`
+  const url = ``
   return Asker.post({
     baseURL,
     url,
