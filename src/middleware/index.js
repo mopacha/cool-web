@@ -1,4 +1,5 @@
 const listen = require('./listen')
+const bodyParser = require('./body-parser')
 const setContext = require('./set-context')
 const view = require('./view')
 const router = require('./router')
@@ -9,5 +10,6 @@ module.exports.default = module.exports = {
   setContext,
   view,
   router,
-  staticServe
+  staticServe,
+  bodyParser
 }

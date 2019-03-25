@@ -1,4 +1,5 @@
-const api = require('../service/index')
+const CoolService = require('../service/cool-service')
+
 class Pages {
   async appOne (ctx, _next) {
     const title = 'appOne'
@@ -16,9 +17,10 @@ class Pages {
     })
   }
 
-  async list (ctx, _next) {
-    const locals = {
-      list: await api.getList(ctx)
+  async login (ctx, _next) {
+    console.log(ctx.request.body)
+    let locals = {
+      data: await CoolService.login(ctx)
     }
     ctx.body = locals
   }

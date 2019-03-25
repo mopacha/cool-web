@@ -3,5 +3,5 @@ module.exports = [
   { path: '', ctrl: page.appOne },
   { path: 'appOne', ctrl: page.appOne },
   { path: 'appTwo', ctrl: page.appTwo },
-  { path: 'api/list', ctrl: page.list, method: 'post' }
+  { path: 'api/login', ctrl: page.login, method: 'post' }
 ]

@@ -1,5 +1,5 @@
 {{extend '../layout/default.art'}}
-{{block 'title'}}详情页{{/block}}
+{{block 'title'}}cool-b{{/block}}
 {{block 'styles'}}<link rel="stylesheet" href="{{@staticHostUrl}}/appTwo.css">{{/block}}
 {{block 'scripts'}}<script type="text/javascript" src="{{@staticHostUrl}}/appTwo.js"></script>{{/block}}
 {{block 'body'}}

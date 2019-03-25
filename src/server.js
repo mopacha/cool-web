@@ -3,6 +3,7 @@ const middleware = require('./middleware/index')
 const app = new Koa()
 
 middleware.setContext(app)
+middleware.bodyParser(app)
 middleware.view(app)
 middleware.staticServe(app)
 middleware.router(app)
