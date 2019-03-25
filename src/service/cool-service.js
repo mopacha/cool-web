@@ -1,9 +1,18 @@
 const config = require('config')
-const baseUrl = config.coolAppHostUrl
+const Asker = require('../@cool/asker')
+const baseURL = config.coolAppHostUrl
 
-function login (ctx) {
-  const url = `${baseUrl}/login`
-  return ctx.axios(ctx, { url, method: 'post' })
+// headers: {
+// 	'Content-Type': 'application/x-www-form-urlencoded'
+// }
+
+const login = reqData => {
+  const url = `/user/login`
+  return Asker.post({
+    baseURL,
+    url,
+    data: reqData
+  })
 }
 
 module.exports = {

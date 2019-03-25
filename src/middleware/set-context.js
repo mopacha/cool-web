@@ -1,10 +1,8 @@
 const logger = require('../utils/log4js')
-const axios = require('../utils/axios')
 /**
  * 包上通用内容到上下文(可变) 比如axios ,某些utils方法....
  */
 function wrapCommonToContext (app) {
-  app.context.axios = axios
   app.context.logger = logger
 }
 

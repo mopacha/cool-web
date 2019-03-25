@@ -139,6 +139,12 @@ manifest 文件生产和测试都需要
 
 前端request--->node层---->service api
 
+### 封装request 提供统一API
+
+Asker
+
+
+### 装饰器
 
 
   

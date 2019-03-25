@@ -1,5 +1,5 @@
 const listen = require('./listen')
-const bodyParser = require('./body-parser')
+const koaBody = require('./koa-body')
 const setContext = require('./set-context')
 const view = require('./view')
 const router = require('./router')
@@ -11,5 +11,5 @@ module.exports.default = module.exports = {
   view,
   router,
   staticServe,
-  bodyParser
+  koaBody
 }
