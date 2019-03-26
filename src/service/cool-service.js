@@ -7,14 +7,8 @@ const baseURL = config.coolAppHostUrl
 // }
 
 const login = reqData => {
-  const url = ``
-  return Asker.post({
-    baseURL,
-    url,
-    data: reqData
-  })
+  const url = `/adminbd/login`
+  return Asker.post({ baseURL, url, data: reqData })
 }
 
-module.exports = {
-  login
-}
+module.exports = { login }

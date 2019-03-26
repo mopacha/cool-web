@@ -1,11 +1,12 @@
+const getIPAdress = require('../utils/getIPAdress')()
+
 /**
  * 监听
  */
 module.exports.default = module.exports = async app => {
-  // let port = app.context.port || 3333;
-  const port = 3000
+  const port = process.env.PORT || 3000
+
   app.listen(port, () => {
-    app.context.logger.info(`server listen on ${port}`)
-    // app.context.logger.info(`---------- mode: ${app.context.env} ----------`);
+    app.context.logger.info(`mode: ${process.env.NODE_ENV}---server on: http://${getIPAdress}:${port}`)
   })
 }
