@@ -11,15 +11,17 @@ class Pages {
 
   async appTwo (ctx, _next) {
     const title = 'appTwo'
-    console.log('call appTwo')
+
     await ctx.render('appTwo/index', {
       title
     })
   }
 
   async login (ctx, _next) {
+    // ctx.log.error('start request login api')
+
     let locals = {
-      data: await CoolService.login(ctx.request.body)
+      data: await CoolService.login(ctx, ctx.request.body)
     }
     ctx.body = locals
   }

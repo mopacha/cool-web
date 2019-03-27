@@ -7,7 +7,7 @@
 			"instances": 4,
 			"max_memory_restart": "1G",
 			"autorestart": true,
-			"watch": ["server", "dependencies"],
+			"watch": ["src", "config"],
 			"env": {
 				"NODE_ENV": "production",
 				"PORT": 8896

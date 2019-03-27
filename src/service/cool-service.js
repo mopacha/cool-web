@@ -6,9 +6,9 @@ const baseURL = config.coolAppHostUrl
 // 	'Content-Type': 'application/x-www-form-urlencoded'
 // }
 
-const login = reqData => {
+const login = (ctx, reqData) => {
   const url = `/adminbd/login`
-  return Asker.post({ baseURL, url, data: reqData })
+  return Asker.post({ ctx, baseURL, url, data: reqData })
 }
 
 module.exports = { login }

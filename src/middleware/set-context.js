@@ -1,19 +1,8 @@
-const logger = require('../utils/log4js')
-/**
- * 包上通用内容到上下文(可变) 比如axios ,某些utils方法....
- */
-function wrapCommonToContext (app) {
+
+let logger = require('log4js').getLogger('koa-vue-web:running')
+logger.level = 'info'
+
+module.exports = async (app) => {
   app.context.logger = logger
-}
-
-function appContextConfig (app) {
-  wrapCommonToContext(app)
-}
-
-/**
- * 设置上下文
- */
-module.exports.default = module.exports = async app => {
-  appContextConfig(app)
-  app.context.logger.info('set-context initialized')
+  app.context.logger.debug('set-context initialized')
 }

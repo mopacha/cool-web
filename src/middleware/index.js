@@ -3,13 +3,13 @@ const koaBody = require('./koa-body')
 const setContext = require('./set-context')
 const view = require('./view')
 const router = require('./router')
-const staticServe = require('./static-serve')
+const logger = require('./logger')
 
-module.exports.default = module.exports = {
-  listen,
+module.exports = {
+  logger,
   setContext,
+  koaBody,
   view,
   router,
-  staticServe,
-  koaBody
+  listen
 }

@@ -2,10 +2,8 @@ const path = require('path')
 const koaRouter = require('koa-router')
 const readDirSync = require('../utils/read-dirsync')
 let allPartRouter = []
-/**
- * 路由
- */
-module.exports.default = module.exports = async app => {
+
+module.exports = async app => {
   const basename = path.basename(module.filename)
   const router = koaRouter({
     prefix: '/'

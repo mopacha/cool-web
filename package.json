@@ -9,9 +9,10 @@
 	"scripts": {
 		"start": "pm2 start process.json --watch --ignore-watch src/static | cool start",
 		"server": "pm2 start process.json --watch --ignore-watch src/static",
-		"stop": "pm2 stop $(pm2 list|grep koa-vue-web|awk '{print $4}')",
+		"stop1": "pm2 stop $(pm2 list|grep koa-vue-web|awk '{print $4}')",
+		"stop":"pm2 delete  koa-vue-web",
 		"static": "cool start",
-		"static-build": "cool build",
+		"static-build": "cool build --watch src/",
 		"devServer": "cross-env NODE_ENV=development node ./src/server.js ",
 		"proServer": "cross-env NODE_ENV=production node ./src/server.js "
 	},
