@@ -51,9 +51,22 @@ You may need an appropriate loader to handle this file type.
 |   '../page/home');
  @ ./src/static/apps/appOne/app.js 5:0-30 7:10-16
 
+
+方案一；
 ```bash
 	npm update acorn --depth 20
 	npm dedupe
+```
+
+方案二
+
+```
+ npm i acorn@6 -D
+npm i -D babel-plugin-dynamic-import-node
+"plugins": [
+    ... ,
+    "dynamic-import-node"    
+]
 ```
 
 
@@ -147,17 +160,15 @@ manifest 文件生产和测试都需要
 ### log4js
 
 
-
-
-
-
-
 ### 装饰器
 
 
+##报错
   
+>ERROR in ./node_modules/babel-runtime/core-js/object/assign.js
+>Module not found: Error: Can't resolve 'core-js/library/fn/object/assign' in 'D:\aaaaa-last-my-node-project\mygit\koa-vue-web\node_modules\babel-runtime\core-js\object'
 
-
+`npm i core-js@2`
 
 
 
