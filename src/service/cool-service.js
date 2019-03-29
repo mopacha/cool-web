@@ -1,5 +1,5 @@
 const config = require('config')
-const Asker = require('../@cool/asker')
+const Asker = require('cool-asker')
 const baseURL = config.coolAppHostUrl
 
 // headers: {
@@ -7,7 +7,7 @@ const baseURL = config.coolAppHostUrl
 // }
 
 const login = (ctx, reqData) => {
-  const url = `/adminbd/login`
+  const url = `/query`
   return Asker.post({ ctx, baseURL, url, data: reqData })
 }
 

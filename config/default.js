@@ -1,5 +1,5 @@
 const envConfig = require('./env-config')
-const env = require(`${process.cwd()}/src/@cool/env`)(envConfig)
+const env = require('cool-env')(envConfig)
 
 module.exports = {
   appName: `${env.APP_NAME}`,

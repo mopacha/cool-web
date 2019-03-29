@@ -18,8 +18,6 @@ class Pages {
   }
 
   async login (ctx, _next) {
-    // ctx.log.error('start request login api')
-
     let locals = {
       data: await CoolService.login(ctx, ctx.request.body)
     }

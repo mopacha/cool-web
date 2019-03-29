@@ -1,3 +1,3 @@
-import Icon from '@/@cool/svg-icon/Icon'
+import Icon from 'cool-svg-icon'
 // eslint-disable-next-line no-undef
 Vue.component('icon', Icon)

@@ -4,7 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const TimeFixPlugin = require('time-fix-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -136,10 +136,10 @@ exports._default = function (env) {
 
   const optimization = {
     minimizer: [
-      // 自定义js优化配置，将会覆盖默认配置
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          cache: true,
+      // 自定义js优化配置，
+      new TerserPlugin({
+        terserOptions: {
+          cache: false,
           parallel: true, // 开启并行压缩，充分利用cpu
           sourceMap: true,
           extractComments: true, // 移除注释
@@ -154,6 +154,7 @@ exports._default = function (env) {
           }
         }
       }),
+
       // 配置css文件压缩
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /\.css$/g,
