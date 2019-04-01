@@ -2,6 +2,10 @@
 
 ## koa-vue-web
 
+### 版本依赖
+node v8.11.3
+gulp-cli  v2.1.0
+
 ### 安装依赖
 
 ```
