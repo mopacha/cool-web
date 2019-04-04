@@ -9,6 +9,7 @@ gulp-cli  v2.1.0
 ### 安装依赖
 
 ```
+npm i cool-cli2 -g
 npm i gulp -g && npm i pm2 -g
 ```
 
