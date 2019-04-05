@@ -1,2 +1,2 @@
-const run = require('cool-resource-optimizer')
+const run = require('@coofy/resource-optimizer')
 run()

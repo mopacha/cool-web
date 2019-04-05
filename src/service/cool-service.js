@@ -1,5 +1,5 @@
 const config = require('config')
-const Asker = require('cool-asker')
+const Asker = require('@coofy/asker')
 const baseURL = config.coolAppHostUrl
 
 // headers: {
