@@ -1,10 +1,4 @@
-const Koa = require('koa')
-const middleware = require('./middleware/index')
-const app = new Koa()
 
-middleware.setContext(app)
-middleware.logger(app)
-middleware.koaBody(app)
-middleware.view(app)
-middleware.router(app)
-middleware.listen(app)
+const koafy = require('@coofy/koafy')
+
+koafy.start()

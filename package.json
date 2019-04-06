@@ -16,25 +16,17 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"art-template": "^4.13.2",
 		"config": "^3.0.1",
 		"@coofy/asker": "^1.0.0",
-		"@coofy/cool-cli": "^1.0.0",
 		"@coofy/env": "^1.0.0",
+		"@coofy/koafy": "^1.0.0",
 		"@coofy/resource-optimizer": "^1.0.0",
 		"@coofy/svg-icon": "^1.0.0",
 		"cross-env": "^5.2.0",
-		"debug": "^4.1.1",
-		"install": "^0.12.2",
-		"koa": "^2.7.0",
-		"koa-art-template": "^1.1.1",
-		"koa-body": "^4.1.0",
-		"koa-router": "^7.4.0",
-		"koa-static": "^5.0.0",
-		"log4js": "^4.0.2",
-		"npm": "^6.8.0"
+		"log4js": "^4.0.2"
 	},
 	"devDependencies": {
+		"@coofy/cool-cli": "^1.0.0",
 		"babel-eslint": "^10.0.1",
 		"element-ui": "^2.6.1",
 		"eslint": "^5.8.0",

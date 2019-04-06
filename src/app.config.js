@@ -9,7 +9,10 @@ module.exports = {
 
   staticAssets: {
     publicPath: `${config.staticDomain}/koa-vue-static`
-  }
+  },
+
+  //透传
+  
 }
 
 // eslint-disable-next-line camelcase
