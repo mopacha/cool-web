@@ -16,8 +16,8 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"config": "^3.0.1",
 		"@coofy/asker": "^1.0.0",
+		"@coofy/config": "^1.0.0",
 		"@coofy/env": "^1.0.0",
 		"@coofy/koafy": "^1.0.0",
 		"@coofy/resource-optimizer": "^1.0.0",

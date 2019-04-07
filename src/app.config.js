@@ -1,32 +1,18 @@
-const config = require('config')
+const config = require('@coofy/config')
 
 module.exports = {
   // 模板变量全局配置
   views: {
     staticDomain: config.staticDomain,
-    staticHostUrl: `${config.staticDomain}/koa-vue-static`
+    staticHostUrl: `${config.staticDomain}${config.staticContextPath}`
   },
 
+  // cool build
   staticAssets: {
-    publicPath: `${config.staticDomain}/koa-vue-static`
+    publicPath: `${config.staticDomain}${config.staticContextPath}`
   },
 
-  //透传
+  //透传 todo
   
 }
 
-// eslint-disable-next-line camelcase
-// module.exports = node_env => {
-//   const config = {
-//     development: {
-//       mode: 0
-//     }
-//   }
-
-//   return Object.assign(
-//     {
-//       px2rem: false
-//     },
-//     config[node_env]
-//   )
-// }
