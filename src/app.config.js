@@ -12,7 +12,14 @@ module.exports = {
     publicPath: `${config.staticDomain}${config.staticContextPath}`
   },
 
-  //透传 todo
-  
+  //透传 
+  proxys: {
+    demo: {
+      baseUrl: 'http://demo.cool.app/cool-app',
+      patterns: [
+        '/api/.*'
+      ]
+    }
+  }
 }
 
