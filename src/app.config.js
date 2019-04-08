@@ -12,14 +12,19 @@ module.exports = {
     publicPath: `${config.staticDomain}${config.staticContextPath}`
   },
 
-  //透传 
+  // 透传
   proxys: {
     demo: {
-      baseUrl: 'http://demo.cool.app/cool-app',
+      baseUrl: 'http://qcquery.ppdapi.com',
       patterns: [
-        '/api/.*'
+        '/query$'
+      ]
+    },
+    demo2: {
+      baseUrl: 'http://qcquery.cool.com',
+      patterns: [
+        '/query/.*'
       ]
     }
   }
 }
-

@@ -18,10 +18,8 @@ class Pages {
   }
 
   async login (ctx, _next) {
-    let locals = {
-      data: await CoolService.login(ctx, ctx.request.body)
-    }
-    ctx.body = locals
+    const data = await CoolService.login(ctx, ctx.request.body)
+    ctx.body = data
   }
 }
 
