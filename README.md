@@ -1,19 +1,15 @@
-# 未完，，待续，，，
 
-## koa-vue-web
+### Environment
+Node: >=8
 
-### 版本依赖
-node v8.11.3
-gulp-cli  v2.1.0
-
-### 安装依赖
+### Install dependencies
 
 ```
 npm i cool-cli2 -g
-npm i gulp -g && npm i pm2 -g
+npm i gulp -g && npm i pm2 -g 
 ```
 
-### 项目启动
+### Run
 
 ```
 npm run start
@@ -84,96 +80,5 @@ static 目录结构
 					├── vue
 					├── app.vue
 					└── index.js
-
-
-### vscode 插件代码检查
-
-- Prettier - Code formatter
-- Vetur
-- ESLint
-
-####配置
-
-```bash
-//文件->首选项->设置 settings.json
-"emmet.syntaxProfiles": {
-		"vue-html": "html",
-		"vue": "html"
-	},
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
-	"editor.tabSize": 2, //制表符符号eslint
-	"editor.formatOnSave": true, //每次保存自动格式化
-	"eslint.autoFixOnSave": true, //让prettier使用eslint的代码格式进行校验
-	"eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
-	"eslint.options": {
-		"plugins": ["html"]
-	},
-	"prettier.semi": false, //去掉代码结尾的分号
-	"prettier.singleQuote": true, //使用带引号替代双引号
-	"prettier.useTabs": true,
-	"javascript.format.insertSpaceBeforeFunctionParenthesis": true, //让函数(名)和后面的括号之间加个空格
-	"vetur.format.options.tabSize": 2, //格式化.vue中html
-	"vetur.format.defaultFormatter.js": "vscode-typescript", //让vue中的js按编辑器自带的ts格式进行格式化
-	"vetur.format.defaultFormatterOptions": {
-		"js-beautify-html": {
-			"wrap_attributes": "force-aligned" //属性强制折行对齐
-		}
-	},
-
-	"workbench.iconTheme": "vscode-icons",
-	"breadcrumbs.enabled": true,
-	"files.associations": {
-		"*.vue": "vue"
-	},
-	"vetur.format.defaultFormatter.html": "js-beautify-html",
-	"prettier.eslintIntegration": true,
-	"prettier.jsxBracketSameLine": true
-```
-
-
-
-### 记录
-
-### 一、开发环境
-
-1. 静态资源服务器(webpack-dev-server)
-
-自动刷新 热更新
-
-```bash
-npm i webpack-dev-server -D
-```
-
-> 1.package.json 里的 scripts 里加上"dev": "webpack-dev-server"，然后执行命令 npm run dev
-
-> 2.并没有通过 webpack 生成 dist 目录，devServer 会将 webpack 构建的文件保存到内存里，不需要打包生成就能预览
-
-运行 `cool start`
-
-2. node 服务
-
-> pm2 启动 node 服务
-
-### 二、线上环境
-
-1. CDN
-2. node 服务
-
-
-## 版本
-node 建议使用8以上LTS版本
-
-
-### 多页面应用
-
-每个页面独立entry,单个页面内使用vue-router
-基于vue， 使用vue-loader加载.vue文件
-单页内使用懒加载异步chunk
-
-
-
-
-
 
 

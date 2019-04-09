@@ -1,7 +1,7 @@
 {
 	"APP_NAME": "vue-koa-web",
 	"NODE_LOGS_DIR": "/logs/",
-	"COOL_APP_HOST_URL": "",
+	"COOL_APP_HOST_URL": "http://qcquery.ppdapi.com",
 	"STATIC_HOST_URL": "https://static.cool.com",
 	"STATIC_CONTEXT_PATH": "/koa-vue-static"
 }

@@ -16,15 +16,7 @@ module.exports = {
   proxys: {
     demo: {
       baseUrl: 'http://qcquery.ppdapi.com',
-      patterns: [
-        '/query$'
-      ]
-    },
-    demo2: {
-      baseUrl: 'http://qcquery.cool.com',
-      patterns: [
-        '/query/.*'
-      ]
+      patterns: ['/query$']
     }
   }
 }

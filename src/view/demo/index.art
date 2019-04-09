@@ -1,0 +1,9 @@
+{{extend '../layout/default.art'}}
+{{block 'title'}}cool{{/block}}
+{{block 'styles'}}<link rel="stylesheet" href="{{@staticHostUrl}}/demo.css">{{/block}}
+{{block 'scripts'}}<script type="text/javascript" src="{{@staticHostUrl}}/demo.js"></script>{{/block}}
+{{block 'body'}}
+<div id="app"></div>
+{{/block}}
+
+

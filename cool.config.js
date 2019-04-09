@@ -2,9 +2,7 @@ const path = require('path')
 
 module.exports = {
   webpack: function (config) {
-    config.entry['appOne'] = './src/static/apps/appOne/app.js'
-    config.entry['appTwo'] = './src/static/apps/appTwo/app.js'
-
+    config.entry['demo'] = './src/static/apps/demo/app.js'
     config.output.path = path.join(__dirname, './dist')
     return config
   },
