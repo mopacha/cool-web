@@ -15,7 +15,7 @@ module.exports = {
   // 透传
   proxys: {
     demo: {
-      baseUrl: 'http://qcquery.ppdapi.com',
+      baseUrl: '',
       patterns: ['/query$']
     }
   }

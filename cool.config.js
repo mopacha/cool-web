@@ -1,4 +1,5 @@
 const path = require('path')
+const config = require('@coofy/config')
 
 module.exports = {
   webpack: function (config) {
@@ -8,7 +9,7 @@ module.exports = {
   },
   devServer: {
     hot: false,
-    port: 8687,
-    publicPath: 'http://localhost:8687/koa-vue-static/'
+    port: 8666,
+    publicPath: `${config.staticDomain}${config.staticContextPath}`
   }
 }
