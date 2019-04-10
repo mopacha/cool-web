@@ -1,11 +1,12 @@
 
 ### Environment
-Node: >=8
+
+>Node: >=8
 
 ### Install dependencies
 
 ```
-npm i cool-cli2 -g
+npm i @coofy/cool-cli -g
 npm i gulp -g && npm i pm2 -g 
 ```
 
@@ -24,8 +25,7 @@ npm run server
 npm run stop
 ```
 
-
-### 部署目录
+### deploy
 
 运行`./release.sh` 生成下面目录并部署
 
@@ -34,10 +34,8 @@ npm run stop
 				├── ${项目名去除web后缀}-static 	 // 静态资源
 		    └── ${项目名去除web后缀}-node 	   // node
 
-
 ### 目录结构
-	├── bin
-	└── cool.js //cool 自定义cool命令
+
 	├── config  // node 项目配置文件目录
 	│    ├── default.js  // 全局配置文件
 	│    ├── development.js  // 开发环境配置文件
@@ -49,21 +47,18 @@ npm run stop
 	├── package.json
 	├── process.json // pm2 启动配置文件
 	├── README.md
-	└── releash.sh
+	└── releash.sh  
+
+
 
 
 Node 目录结构
-
 	src
-	├── @cool
-	│   └── cool-cli  //  webpack 相关工具集
-	│   └── resource-optimizer // 资源打包优化
 	├── controller  // 路由层
 	├── middlewares // 中间件
 	├── router // 路由配置
-	├── services  // 服务层
+	├── service  // 服务层
 	├── static  // 静态资源文件
-	├── utils  // utils 目录
 	├── views  // View 层
 	├── app.config.js  // node 应用服务配置文件
 	└── server.js // node服务启动文件
@@ -73,12 +68,14 @@ static 目录结构
 	src/static
 	├── common  // 通用模块
 	│   └── components
+	└──assets  // 图片资源
 	└── apps // 业务入口
-			└── app1 // 具体 page
-					├── css
-					├── img
-					├── vue
+			└── demo 
+					├── page   // 前端路由页面
+					├── routes // 前端路由
+					├── styles
 					├── app.vue
-					└── index.js
+					└── app.js
+		
 
 
