@@ -1,7 +1,7 @@
 {
 	"apps": [
 		{
-			"name": "koa-vue-web",
+			"name": "{{name}}",
 			"script": "./src/server.js",
 			"exec_mode": "cluster",
 			"instances": 4,
@@ -10,7 +10,7 @@
 			"watch": ["src", "config"],
 			"env": {
 				"NODE_ENV": "production",
-				"PORT": 8000
+				"PORT": {{nodeServerPort}}
 			},
 			"log_date_format": "YYYY-MM-DD HH:mm Z",
 			"error_file": "logs/pm2-error.log",

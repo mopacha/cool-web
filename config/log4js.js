@@ -1,3 +1,5 @@
+const config = require('@coofy/config')
+
 module.exports = {
   appenders: {
     out: {
@@ -5,7 +7,7 @@ module.exports = {
     },
     cheese: {
       type: 'dateFile',
-      filename: `cool-logs/koa-vue-web`,
+      filename: `cool-logs/${config.appName}`,
       pattern: '-yyyy-MM-dd.log',
       alwaysIncludePattern: true
     }

@@ -9,7 +9,7 @@ module.exports = {
   },
   devServer: {
     hot: false,
-    port: 8666,
+    port: {{staticServerPort}},
     publicPath: `${config.staticDomain}${config.staticContextPath}`
   }
 }
