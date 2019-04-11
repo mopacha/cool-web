@@ -1,4 +1,3 @@
-const config = require('@coofy/config')
 
 module.exports = {
   appenders: {
@@ -7,7 +6,7 @@ module.exports = {
     },
     cheese: {
       type: 'dateFile',
-      filename: `cool-logs/${config.appName}`,
+      filename: `logs/cool-web`,
       pattern: '-yyyy-MM-dd.log',
       alwaysIncludePattern: true
     }

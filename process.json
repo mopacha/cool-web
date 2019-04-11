@@ -5,6 +5,7 @@
 			"script": "./src/server.js",
 			"exec_mode": "cluster",
 			"instances": 4,
+			"instance_var": "INSTANCE_ID",
 			"max_memory_restart": "1G",
 			"autorestart": true,
 			"watch": ["src", "config"],
