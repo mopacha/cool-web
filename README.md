@@ -50,9 +50,8 @@ npm run stop
 	└── releash.sh  
 
 
-
-
 Node 目录结构
+
 	src
 	├── controller  // 路由层
 	├── middlewares // 中间件
@@ -67,15 +66,15 @@ static 目录结构
 
 	src/static
 	├── common  // 通用模块
-	│   └── components
+	│   └── components	 
 	└──assets  // 图片资源
 	└── apps // 业务入口
-			└── demo 
-					├── page   // 前端路由页面
-					├── routes // 前端路由
-					├── styles
-					├── app.vue
-					└── app.js
+	└── demo 
+	├── page   // 前端路由页面
+	├── routes // 前端路由
+	├── styles
+	├── app.vue
+	└── app.js
 		
 
 
