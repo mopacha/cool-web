@@ -4,7 +4,7 @@ import App from './app.vue'
 import router from './routes'
 global.Vue = Vue
 Vue.config.productionTip = false
-require('@static/libs')
+require('@static/common/libs')
 
 new Vue({
   router,

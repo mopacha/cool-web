@@ -53,8 +53,8 @@
 </template>
 
 <script>
-import { isvalidUsername } from '@static/public/validate'
-import loginCenterBg from '@static/assets/img/login_center_bg.png'
+import { isvalidUsername } from '@static/common/utils/validate'
+import loginCenterBg from '@static/common/assets/img/login_center_bg.png'
 export default {
   name: 'login',
   data () {
