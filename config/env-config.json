@@ -1,7 +1,7 @@
 {
-	"APP_NAME": "{{name}}",
+	"APP_NAME": "cool-web",
 	"NODE_LOGS_DIR": "/logs/",
 	"COOL_APP_HOST_URL": "",
 	"STATIC_HOST_URL": "https://static.cool.com",
-	"STATIC_CONTEXT_PATH": "/{{staticConextPath}}"
+	"STATIC_CONTEXT_PATH": "/cool-static"
 }

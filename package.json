@@ -1,44 +1,44 @@
 {
-	"name": "{{name}}",
-	"version": "1.0.0",
-	"description": "{{description}}",
-	"scripts": {
-		"static": "cool start",
-		"start": "cross-env NODE_ENV=development node ./src/server.js",
-		"preServer": "cross-env NODE_ENV=production node ./src/server.js ",
-		"static-build": "cool build",
-		"server": "pm2 start process.json --watch --ignore-watch src/static",
-		"stop": "pm2 delete {{name}}"
-	},
-	"author": "mopacha@163.com",
-	"license": "ISC",
-	"dependencies": {
-		"@coofy/asker": "^1.0.0",
-		"@coofy/config": "^1.0.0",
-		"@coofy/env": "^1.0.0",
-		"@coofy/resource-optimizer": "^1.0.0",
-		"@coofy/svg-icon": "^1.0.0",
-		"cross-env": "^5.2.0",
-		"log4js": "^4.0.2"
-	},
-	"devDependencies": {
-		"@coofy/cool-cli": "^1.0.2",
-		"@coofy/koafy": "^1.0.1",
-		"babel-eslint": "^10.0.1",
-		"element-ui": "^2.6.1",
-		"eslint": "^5.8.0",
-		"eslint-config-standard": "^12.0.0",
-		"eslint-config-vue": "^2.0.2",
-		"eslint-friendly-formatter": "^4.0.1",
-		"eslint-loader": "^2.1.2",
-		"eslint-plugin-html": "^5.0.3",
-		"eslint-plugin-import": "^2.16.0",
-		"eslint-plugin-node": "^8.0.1",
-		"eslint-plugin-promise": "^4.0.1",
-		"eslint-plugin-standard": "^4.0.0",
-		"eslint-plugin-vue": "^5.2.2",
-		"vue": "^2.6.7",
-		"vue-router": "^3.0.1",
-		"vuex": "^3.0.1"
-	}
+  "name": "cool-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "static": "cool start",
+    "start": "cross-env NODE_ENV=development node ./src/server.js",
+    "preServer": "cross-env NODE_ENV=production node ./src/server.js ",
+    "static-build": "cool build",
+    "server": "pm2 start process.json --watch --ignore-watch src/static",
+    "stop": "pm2 delete cool-web"
+  },
+  "author": "mopacha@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "@coofy/asker": "^1.0.0",
+    "@coofy/config": "^1.0.0",
+    "@coofy/env": "^1.0.0",
+    "@coofy/resource-optimizer": "^1.0.0",
+    "@coofy/svg-icon": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "log4js": "^4.0.2"
+  },
+  "devDependencies": {
+    "@coofy/cool-cli": "^1.0.2",
+    "@coofy/koafy": "^1.0.1",
+    "babel-eslint": "^10.0.1",
+    "element-ui": "2.7.2",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "vue": "^2.6.7",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  }
 }
