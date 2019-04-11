@@ -22,7 +22,8 @@
 		"log4js": "^4.0.2"
 	},
 	"devDependencies": {
-		"@coofy/cool-cli": "^1.0.0",
+		"@coofy/cool-cli": "^1.0.2",
+		"@coofy/koafy": "^1.0.1",
 		"babel-eslint": "^10.0.1",
 		"element-ui": "^2.6.1",
 		"eslint": "^5.8.0",
