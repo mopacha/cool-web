@@ -15,8 +15,8 @@
   "dependencies": {
     "@coofy/asker": "^1.0.0",
     "@coofy/config": "^1.0.0",
-		"@coofy/env": "^1.0.0",
-		"@coofy/koafy": "^1.0.1",
+    "@coofy/env": "^1.0.0",
+    "@coofy/koafy": "^1.0.1",
     "@coofy/resource-optimizer": "^1.0.0",
     "cross-env": "^5.2.0",
     "log4js": "^4.0.2",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "xml-loader": "^1.2.1",
-    "@coofy/cool-cli": "^1.0.3",
+    "@coofy/cool-cli": "^1.0.4",
     "babel-eslint": "^10.0.1",
     "element-ui": "2.7.2",
     "eslint": "^5.8.0",
