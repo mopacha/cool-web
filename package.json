@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cool start | npm run devServer",
     "static": "cool start",
-    "devServer": "pm2 start process.json --env dev --watch --ignore-watch src/static",
+    "devServer": "cross-env NODE_ENV=development node ./src/server.js",
+    "devServer2": "pm2 start process.json --env dev --watch --ignore-watch src/static",
     "build": "cool build",
     "server": "pm2 start process.json",
     "stop": "pm2 delete cool-web"
