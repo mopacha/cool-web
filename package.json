@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "cool start | npm run devServer",
     "static": "cool start",
-    "start": "cross-env NODE_ENV=development node ./src/server.js",
-    "preServer": "cross-env NODE_ENV=production node ./src/server.js ",
-    "static-build": "cool build",
-    "server": "pm2 start process.json --watch --ignore-watch src/static",
+    "devServer": "pm2 start process.json --env dev --watch --ignore-watch src/static",
+    "build": "cool build",
+    "server": "pm2 start process.json",
     "stop": "pm2 delete cool-web"
   },
   "author": "mopacha@163.com",

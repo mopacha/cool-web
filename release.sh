@@ -6,7 +6,7 @@ gulp -v $i >/dev/null || { echo "$i gulp not found. need install ,please wait...
 rm -rf node_modules
 cnpm i
 gulp clean
-cnpm run static-build
+cnpm run build
 gulp pkStatic
 gulp babelNode
 rm -rf node_modules
