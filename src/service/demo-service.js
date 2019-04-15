@@ -1,6 +1,6 @@
 const config = require('config')
 const Asker = require('@coofy/asker')
-const baseURL = config.coolAppHostUrl
+const baseURL = config.demoAppUrl
 
 // headers: {
 // 	'Content-Type': 'application/x-www-form-urlencoded'

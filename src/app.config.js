@@ -6,7 +6,7 @@ module.exports = {
   // 透传
   proxys: {
     demo: {
-      baseUrl: '',
+      baseUrl: config.demoAppUrl,
       patterns: ['/query$']
     }
   }

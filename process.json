@@ -6,14 +6,9 @@
 	"instance_var": "INSTANCE_ID",
 	"max_memory_restart": "1G",
 	"autorestart": true,
-	"watch": ["src", "config"],
 	"env": {
 		"NODE_ENV": "production",
 		"PORT": 3000
-	},
-	"env_dev": {
-	    "NODE_ENV": "development",
-	    "PORT": 3001
 	},
 	"log_date_format": "YYYY-MM-DD HH:mm Z",
 	"error_file": "logs/pm2-error.log",

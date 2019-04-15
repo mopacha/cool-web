@@ -9,7 +9,7 @@
         <div style="text-align: center">
 					<icon name="chameleon" :w="40" :h="40" id="animation"></icon>
         </div>
-        <h2 class="login-title color-main">cool-admin-web</h2>
+        <h2 class="login-title color-main">cool-web</h2>
         <el-form-item prop="username">
           <el-input name="username"
                     type="text"

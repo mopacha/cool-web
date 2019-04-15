@@ -5,8 +5,7 @@
   "scripts": {
     "start": "cool start | npm run devServer",
     "static": "cool start",
-    "devServer": "cross-env NODE_ENV=development node ./src/server.js",
-    "devServer2": "pm2 start process.json --env dev --watch --ignore-watch src/static",
+    "devServer": "cross-env NODE_ENV=development PORT=3001 nodemon --watch src/ --watch config --ignore src/static --exec babel-node ./src/server.js",
     "build": "cool build",
     "server": "pm2 start process.json",
     "stop": "pm2 delete cool-web"
@@ -24,7 +23,13 @@
     "xml-loader": "^1.2.1"
   },
   "devDependencies": {
-    "xml-loader": "^1.2.1",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
     "@coofy/cool-cli": "^1.0.4",
     "babel-eslint": "^10.0.1",
     "element-ui": "2.7.2",
@@ -39,8 +44,10 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
+    "nodemon": "^1.18.11",
     "vue": "^2.6.7",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "xml-loader": "^1.2.1"
   }
 }

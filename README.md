@@ -55,7 +55,6 @@ Node 目录结构
 	src
 	├── controller  // 路由层
 	├── middlewares // 中间件
-	├── router // 路由配置
 	├── service  // 服务层
 	├── static  // 静态资源文件
 	├── views  // View 层

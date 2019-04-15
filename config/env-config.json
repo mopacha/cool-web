@@ -1,7 +1,6 @@
 {
 	"APP_NAME": "cool-web",
-	"NODE_LOGS_DIR": "/logs/",
-	"COOL_APP_HOST_URL": "",
 	"STATIC_HOST_URL": "https://static.cool.com",
-	"STATIC_CONTEXT_PATH": "/cool-static"
+	"STATIC_CONTEXT_PATH": "/cool-static",
+	"DOMO_APP_URL": "http://qcquery.ppdapi.com"
 }
