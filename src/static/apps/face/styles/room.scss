@@ -1,0 +1,49 @@
+.Room {
+	height: 100%;
+	display:flex;
+	.left {
+		text-align: center;
+		background: rgba(43, 56, 84, 1);
+		width: 220px;
+
+		.wrap {
+			top: 20%;
+			position: relative;
+			img{
+				width: 100px;
+			}
+			.title {
+				margin: 30px 0;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 1);
+				font-size: 18px;
+			}
+		}
+	}
+	.right {
+		flex:1;
+		.wrap {
+			height: 90%;
+			.out-webrtc{
+				position: absolute;
+				z-index: 60;
+				bottom: 10%;
+				right: 40px;
+				.stop-conversition{
+					cursor: pointer;
+					text-align: center;
+					width:200px;
+					height:40px;
+					color: white;
+					line-height: 40px;
+					background:rgba(40,56,86,1);
+					border-radius:4px;
+				}
+			}
+			.webrtc {
+				padding: 30px;
+				height: 100%;
+			}
+		}
+	}
+}

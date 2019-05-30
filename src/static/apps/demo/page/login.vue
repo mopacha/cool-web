@@ -7,9 +7,12 @@
                ref="loginForm"
                label-position="left">
         <div style="text-align: center">
-					<icon name="chameleon" :w="40" :h="40" id="animation"></icon>
+          <icon name="chameleon"
+                :w="40"
+                :h="40"
+                id="animation"></icon>
         </div>
-        <h2 class="login-title color-main">cool-admin-web</h2>
+        <h2 class="login-title color-main">cool-web</h2>
         <el-form-item prop="username">
           <el-input name="username"
                     type="text"
@@ -17,7 +20,10 @@
                     autoComplete="on"
                     placeholder="请输入用户名">
             <span slot="prefix">
-									<icon class="color-main" name="user" :w="16" :h="16"></icon>
+              <icon class="color-main"
+                    name="user"
+                    :w="16"
+                    :h="16"></icon>
             </span>
           </el-input>
         </el-form-item>
@@ -29,11 +35,17 @@
                     autoComplete="on"
                     placeholder="请输入密码">
             <span slot="prefix">
-								<icon class="color-main" name="password" :w="14" :h="14"></icon>
+              <icon class="color-main"
+                    name="password"
+                    :w="14"
+                    :h="14"></icon>
             </span>
             <span slot="suffix"
                   @click="showPwd">
-										<icon class="color-main" name="eye" :w="15" :h="15"></icon>
+              <icon class="color-main"
+                    name="eye"
+                    :w="15"
+                    :h="15"></icon>
             </span>
           </el-input>
         </el-form-item>
@@ -53,11 +65,14 @@
 </template>
 
 <script>
-import { isvalidUsername } from '@static/public/validate'
-import loginCenterBg from '@static/assets/img/login_center_bg.png'
+import { isvalidUsername } from '@utils/validate'
+import loginCenterBg from '@common/assets/img/login_center_bg.png'
+import http from '@utils/http'
+import { setCookie } from '@utils/storage'
+
 export default {
   name: 'login',
-  data () {
+  data() {
     const validateUsername = (rule, value, callback) => {
       if (!isvalidUsername(value)) {
         callback(new Error('请输入正确的用户名'))
@@ -81,28 +96,40 @@ export default {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
         password: [{ required: true, trigger: 'blur', validator: validatePass }]
       },
-      loading: false,
       pwdType: 'password',
-      loginCenterBg
+      loginCenterBg,
+      loading: false
     }
   },
   methods: {
-    showPwd () {
+    showPwd() {
       if (this.pwdType === 'password') {
         this.pwdType = ''
       } else {
         this.pwdType = 'password'
       }
     },
-    handleLogin () {
+    handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
-          this.loading = true
-          this.$store.dispatch('Login', this.loginForm).then(() => {
-            this.loading = false
-            this.$router.push({ path: '/' })
-          }).catch(() => {
-            this.loading = false
+          this.$store.dispatch('onLoading', true)
+          http.ask({
+            url: '/api/login',
+            method: 'post',
+            data: {
+              userid: 123,
+              appid: '11050001'
+            }
+          }).then(res => {
+            setCookie('token', 'ssssfagagaagag')
+            console.log(res)
+            this.$router.push({
+              path: 'list'
+            })
+            this.$store.dispatch('onLoading', false)
+          }).catch((err) => {
+            console.log(err)
+            this.$store.dispatch('onLoading', false)
           })
         } else {
           console.log('参数验证不合法！')
@@ -115,5 +142,5 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-@import '../styles/login.scss';
+@import "../styles/login.scss";
 </style>

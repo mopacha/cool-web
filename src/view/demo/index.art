@@ -2,7 +2,9 @@
 {{block 'title'}}cool{{/block}}
 {{block 'styles'}}<link rel="stylesheet" href="{{@staticUrl}}/demo.css">{{/block}}
 {{block 'scripts'}}<script type="text/javascript" src="{{@staticUrl}}/demo.js"></script>{{/block}}
+
 {{block 'body'}}
+<script type="text/javascript" src="{{@staticUrl}}/runtime-demo.js"></script>
 <div id="app"></div>
 {{/block}}
 

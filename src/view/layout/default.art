@@ -3,23 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"></meta>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta name="keyword" content="">
     <meta name="description" content="">
     <title>{{block 'title'}}{{/block}}</title>
-		<link rel="stylesheet" href="{{@staticUrl}}/chunk-elementUI.css">
     {{block 'styles'}}{{/block}}
 </head>
 <body >
    {{block 'body'}}{{/block}}
 	 <script type="text/javascript">
-        window.staticDomain=`{{staticDomain}}`
-				window.staticUrl=`{{staticUrl}}`
+        window.staticDomain="{{staticDomain}}"
+				window.staticUrl="{{staticUrl}}"
     </script>
-		<script type="text/javascript" src="{{@staticUrl}}/manifest.js"></script>
-		<script type="text/javascript" src="{{@staticUrl}}/chunk-libs.js"></script>
-		<script type="text/javascript" src="{{@staticUrl}}/chunk-elementUI.js"></script>
-
 	 {{block 'scripts'}}{{/block}}
 </body>
 </html>

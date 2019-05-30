@@ -6,8 +6,8 @@ module.exports = {
   // 透传
   proxys: {
     demo: {
-      baseUrl: '',
-      patterns: ['/query$']
+      baseUrl: config.demoAppUrl,
+      patterns: ['/api/*']
     }
   }
 }

@@ -15,6 +15,14 @@ module.exports = {
 	rules: {
 		'no-tabs': 'off',
 		'no-mixed-spaces-and-tabs': 0,
+		'space-before-function-paren': [
+			'error',
+			{
+				anonymous: 'always',
+				named: 'never',
+				asyncArrow: 'always'
+			}
+		],
 		indent: [
 			2,
 			2,

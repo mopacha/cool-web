@@ -1,0 +1,44 @@
+.Login {
+	height: 100%;
+	display:flex;
+	.left {
+		text-align: center;
+		background: rgba(43, 56, 84, 1);
+
+		.wrap {
+			top: 20%;
+			position: relative;
+			img{
+				width: 200px;
+			}
+			.title {
+				margin: 50px;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 1);
+				font-size: 18px;
+			}
+		}
+	}
+	.right {
+		margin-left:20%; flex:1;
+		.wrap {
+			top: 50%;
+			position: relative;
+			.label {
+				margin-bottom: 16px;
+			}
+			.el-input {
+				width: 300px;
+				color: #2b3854;
+				margin-bottom: 16px;
+			}
+			.el-button.is-round {
+				width: 120px;
+				height: 32px;
+				background: rgba(40, 56, 86, 1);
+				border-radius: 16px;
+				line-height: 4px;
+			}
+		}
+	}
+}

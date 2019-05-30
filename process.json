@@ -1,16 +1,16 @@
 {
 	"apps": [
 		{
-			"name": "{{name}}",
+			"name": "bastet-web",
 			"script": "./src/server.js",
-			"exec_mode": "cluster",
-			"instances": 4,
+			"exec_mode": "cluster_mode",
+			"instances": "max",
+			"instance_var": "INSTANCE_ID",
 			"max_memory_restart": "1G",
 			"autorestart": true,
-			"watch": ["src", "config"],
 			"env": {
 				"NODE_ENV": "production",
-				"PORT": {{nodeServerPort}}
+				"PORT": 8066
 			},
 			"log_date_format": "YYYY-MM-DD HH:mm Z",
 			"error_file": "logs/pm2-error.log",
