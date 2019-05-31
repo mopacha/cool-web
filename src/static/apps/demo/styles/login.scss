@@ -1,5 +1,6 @@
+$loginColor: #8c7dea;
 .color-main {
-	color: #6c5adc94;
+	color: $loginColor;
 }
 .login-form-layout {
 	position: absolute;
@@ -7,13 +8,14 @@
 	right: 0;
 	width: 360px;
 	margin: 140px auto;
-	border-top: 10px solid #4c2fff94;
+	border-top: 10px solid $loginColor;
 }
 .login-title {
 	text-align: center;
+	margin-bottom: 20px;
 }
 .login-center-layout {
-	background: #4c2fff94;
+	background: $loginColor;
 	width: auto;
 	height: auto;
 	max-width: 100%;
@@ -26,8 +28,8 @@
 }
 
 .el-button--primary {
-	background-color: #4c2fff94;
-	border-color: #4c2fff94;
+	background-color: $loginColor;
+	border-color: $loginColor;
 }
 @keyframes changeColor {
 	0% {

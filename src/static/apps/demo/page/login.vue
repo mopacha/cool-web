@@ -49,7 +49,7 @@
             </span>
           </el-input>
         </el-form-item>
-        <el-form-item style="margin-bottom: 60px">
+        <el-form-item style="margin:30px 0 60px 0">
           <el-button style="width: 100%"
                      type="primary"
                      :loading="loading"
@@ -109,10 +109,22 @@ export default {
         this.pwdType = 'password'
       }
     },
+
+    jumpList() {
+      setCookie('token', 'ssssfagagaagag')
+      this.$router.push({
+        path: 'list'
+      })
+    },
+
+    showLoading(flag) {
+      this.$store.dispatch('onLoading', flag)
+      this.loading = flag
+    },
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
-          this.$store.dispatch('onLoading', true)
+          this.showLoading(true)
           http.ask({
             url: '/api/login',
             method: 'post',
@@ -121,15 +133,11 @@ export default {
               appid: '11050001'
             }
           }).then(res => {
-            setCookie('token', 'ssssfagagaagag')
-            console.log(res)
-            this.$router.push({
-              path: 'list'
-            })
-            this.$store.dispatch('onLoading', false)
-          }).catch((err) => {
-            console.log(err)
-            this.$store.dispatch('onLoading', false)
+            this.jumpList()
+            this.showLoading(false)
+          }).catch(() => {
+            this.jumpList()
+            this.showLoading(false)
           })
         } else {
           console.log('参数验证不合法！')
