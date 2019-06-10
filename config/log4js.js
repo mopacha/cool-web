@@ -18,5 +18,7 @@ module.exports = {
       appenders: ['cool', 'out'],
       level: 'debug'
     }
-  }
+  },
+  pm2: true,
+  pm2InstanceVar: 'INSTANCE_ID'
 }

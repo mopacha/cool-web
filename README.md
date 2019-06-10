@@ -24,6 +24,8 @@ npm start
 
 ```
 npm i -g pm2 
+
+pm2 install pm2-intercom
 ```
 
 #### 打包

@@ -17,7 +17,7 @@
     "@coofy/asker": "^1.0.4",
     "@coofy/config": "^1.0.0",
     "@coofy/env": "^1.0.0",
-    "@coofy/koafy": "^1.0.6",
+    "@coofy/koafy": "^1.0.8",
     "@coofy/resource-optimizer": "^1.0.13",
     "cross-env": "^5.2.0",
     "log4js": "^4.0.2"
