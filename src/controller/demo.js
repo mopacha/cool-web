@@ -1,7 +1,7 @@
 const { Get, Controller } = require('@coofy/koafy').router
 
 @Controller('/demo')
-class Pages {
+class DemoController {
 	@Get('/')
   async demo(ctx, _next) {
     const title = 'demo'
@@ -11,4 +11,4 @@ class Pages {
   }
 }
 
-module.exports = Pages
+module.exports = DemoController

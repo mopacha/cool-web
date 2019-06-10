@@ -32,6 +32,7 @@
     "@babel/runtime": "~7.3.4",
     "@coofy/cool-cli": "^1.1.6",
     "@coofy/http": "^1.0.1",
+    "acorn": "^6.0.5",
     "babel-eslint": "^10.0.1",
     "core-js": "^2.6.5",
     "element-ui": "2.7.2",

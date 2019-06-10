@@ -46,3 +46,8 @@ run `./release.sh` will generate the deploy directory
 npm run server
 npm run stop
 ```
+
+
+
+
+`npm dedupe`
