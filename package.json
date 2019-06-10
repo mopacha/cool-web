@@ -30,7 +30,7 @@
     "@babel/plugin-transform-runtime": "~7.3.4",
     "@babel/preset-env": "~7.3.1",
     "@babel/runtime": "~7.3.4",
-    "@coofy/cool-cli": "^1.1.4",
+    "@coofy/cool-cli": "^1.1.6",
     "@coofy/http": "^1.0.1",
     "babel-eslint": "^10.0.1",
     "core-js": "^2.6.5",
