@@ -7,6 +7,7 @@
     <meta name="keyword" content="">
     <meta name="description" content="">
     <title>{{block 'title'}}{{/block}}</title>
+    <link rel="icon" href="favicon.ico">
     {{block 'styles'}}{{/block}}
 </head>
 <body >
